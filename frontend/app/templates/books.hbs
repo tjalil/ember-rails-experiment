@@ -1,0 +1,17 @@
+<ul>
+  {{#each model as |book|}}
+    <a href="javascript:void(0)" {{action 'openCheckoutModal' book}}>
+      <li>
+        <strong>{{book.title}}</strong><br>
+        <em>by</em><br>
+        {{#link-to 'author' book.author.id class="author" bubbles=false}}
+          {{book.author.name}}
+        {{/link-to}}
+      </li>
+    </a>
+  {{/each}}
+</ul>
+
+{{#if showAll}}
+  <button {{action 'showAll'}} >Show All</button>
+{{/if}}

@@ -1,0 +1,9 @@
+<h2 id="title">
+  {{#link-to 'books'}}Our Awesome Bookstore{{/link-to}}
+</h2>
+
+<div class="{{if showingModal 'background' ''}}">
+  {{outlet}}
+</div>
+
+{{outlet 'modal'}}
